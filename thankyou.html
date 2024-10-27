@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hopps - Welcome</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white font-['Inter'] flex items-center justify-center min-h-screen">
+  <div class="text-center max-w-md">
+    <h1 class="text-3xl font-['OverusedGrotesk'] font-black">Welcome to Hopps!</h1>
+    <p class="mt-4 text-lg font-light character-spacing">
+      Thank you for joining the waitlist! We’re thrilled to have you. Spread the word and invite your friends to join as well.
+    </p>
+    <button onclick="share()" class="w-full px-4 py-2 mt-6 text-black bg-white rounded-md hover:bg-gray-200 font-bold">
+      Invite your friends to the waitlist
+    </button>
+  </div>
+
+  <script>
+    function share() {
+      if (navigator.share) {
+        navigator.share({
+          title: 'Join the Hopps Waitlist!',
+          text: 'Hopps is launching soon! Join the waitlist to be the first to experience a new way of dining out.',
+          url: window.location.href
+        }).catch((error) => console.log('Error sharing', error));
+      } else {
+        alert("Sharing is not supported on your browser.");
+      }
+    }
+  </script>
+</body>
+</html>

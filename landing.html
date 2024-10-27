@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hopps - Landing Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: 'OverusedGrotesk';
+      src: url('fonts/OverusedGrotesk-Black.ttf') format('truetype');
+      font-weight: 900;
+    }
+    @font-face {
+      font-family: 'OverusedGrotesk';
+      src: url('fonts/OverusedGrotesk-Bold.ttf') format('truetype');
+      font-weight: 700;
+    }
+    @font-face {
+      font-family: 'OverusedGrotesk';
+      src: url('fonts/OverusedGrotesk-Light.ttf') format('truetype');
+      font-weight: 300;
+    }
+
+    .character-spacing { letter-spacing: -0.05em; }
+    .logo-spacing { letter-spacing: -0.075em; }
+    .hidden { display: none; }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="app.js"></script>
+</head>
+<body class="bg-black text-white font-['Inter']">
+  <!-- Container -->
+  <div class="flex flex-col items-center justify-center min-h-screen px-4 text-center">
+    <!-- Logo -->
+    <h1 class="text-5xl font-['OverusedGrotesk'] font-black logo-spacing">hopps</h1>
+
+    <!-- Intro Text -->
+    <p class="mt-4 text-lg font-['OverusedGrotesk'] font-light max-w-md character-spacing">
+      Welcome to Hopps, a fresh way to explore and enjoy the dining scene. We’re launching soon, and you’re invited to be one of the first to experience a new way of discovering, planning, and booking outings with friends.
+    </p>
+
+    <!-- Form -->
+    <form id="contactForm" class="w-full max-w-md mt-8 space-y-4">
+      <div class="flex flex-col">
+        <label class="text-left font-['OverusedGrotesk'] font-bold character-spacing">Name:*</label>
+        <input type="text" class="mt-1 p-2 bg-black border border-white rounded-md focus:outline-none character-spacing" name="name" required>
+      </div>
+      <div class="flex flex-col">
+        <label class="text-left font-['OverusedGrotesk'] font-bold character-spacing">Email:*</label>
+        <input type="email" class="mt-1 p-2 bg-black border border-white rounded-md focus:outline-none character-spacing" name="email" required>
+      </div>
+      <div class="flex flex-col">
+        <label class="text-left font-['OverusedGrotesk'] font-bold character-spacing">Contact Number:*</label>
+        <div class="flex items-center">
+          <span class="text-white mr-2">+91</span>
+          <input type="tel" class="p-2 bg-black border border-white rounded-md focus:outline-none character-spacing"
+                 name="contactNumber" pattern="\d{10}" maxlength="10" required
+                 placeholder="10-digit mobile number" title="Enter a valid 10-digit phone number">
+        </div>
+      </div>
+      <div class="flex flex-col">
+        <label class="text-left font-['OverusedGrotesk'] font-bold character-spacing">City:*</label>
+        <select id="citySelect" class="mt-1 p-2 bg-black border border-white rounded-md focus:outline-none character-spacing" name="city" required>
+            <option value="" disabled selected>Loading cities...</option> <!-- Initial Loading Option -->
+        </select>
+    </div>
+    
+    <form id="contactForm" class="flex flex-col">
+        <button type="button" id="submitButton" class="w-full px-4 py-2 mt-6 text-black bg-white rounded-md hover:bg-gray-200 font-['OverusedGrotesk'] font-bold character-spacing">
+          <span id="buttonText">Join The Waitlist</span>
+          <span id="spinner" class="hidden">⏳</span>
+        </button>
+      </form>
+    </form>
+  </div>
+
+  <!-- <script>
+   document.addEventListener("DOMContentLoaded", function () {
+    const dropdown = document.getElementById("citySelect");
+
+    // Path to the cities.json file in Firebase Storage
+    const citiesUrl = "https://firebasestorage.googleapis.com/v0/b/hopps-in/o/cities.json?alt=media&token=22f9dd50-ec87-41be-82e5-e5bb26010308";
+
+    // Set initial loading option
+    dropdown.innerHTML = '<option value="" disabled selected>Loading cities...</option>';
+
+    // Fetch cities data from the Firebase Storage JSON file
+    fetch(citiesUrl)
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error("Network response was not ok");
+            }
+            return response.json();
+        })
+        .then((data) => {
+            const cities = data.cities;
+
+            // Remove the "Loading cities..." option and add a default selection
+            dropdown.innerHTML = '<option value="" disabled selected>Select your city</option>';
+
+            // Add city options to the dropdown
+            cities.forEach((city) => {
+                const option = document.createElement("option");
+                option.value = city;
+                option.textContent = city;
+                dropdown.appendChild(option);
+            });
+        })
+        .catch((error) => {
+            console.error("Error fetching the cities:", error);
+            dropdown.innerHTML = '<option value="" disabled selected>Error loading cities</option>';
+        });
+
+    let lastSubmissionTime = 0;
+    const RATE_LIMIT = 60 * 1000; // 1 minute in milliseconds
+
+    // Submit form function
+    function submitForm() {
+        const form = document.getElementById('contactForm');
+        const formData = new FormData(form);
+        const now = Date.now();
+
+        // Rate limiting
+        if (now - lastSubmissionTime < RATE_LIMIT) {
+            alert("Please wait a minute before submitting again.");
+            return;
+        }
+
+        // Validation
+        if (!form.reportValidity()) {
+            alert("Please fill in all fields correctly.");
+            return;
+        }
+
+        // Spinner and rate limit
+        document.getElementById("buttonText").classList.add("hidden");
+        document.getElementById("spinner").classList.remove("hidden");
+
+        const data = {
+            name: formData.get('name'),
+            email: formData.get('email'),
+            contactNumber: '+91 ' + formData.get('contactNumber'),
+            city: formData.get('city')
+        };
+
+        fetch("https://script.google.com/macros/s/AKfycbwJcUqZ_EA8X9QYaaOrJQ_KZqLJbU0wIyih66daPT-CdE_7meFLwqOnxC7-gBKN50wMtA/exec", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => response.json())
+        .then(data => {
+            lastSubmissionTime = now;
+            window.location.href = "thankyou.html"; // Redirect to confirmation page
+        })
+        .catch(error => {
+            alert("There was an error. Please try again.");
+            console.error('Error!', error.message);
+        })
+        .finally(() => {
+            document.getElementById("buttonText").classList.remove("hidden");
+            document.getElementById("spinner").classList.add("hidden");
+            form.reset();
+        });
+    }
+
+    // Bind form submission
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent default form submission
+        submitForm();
+    });
+});
+
+  </script> -->
+
+  <style>
+    /* Additional styles for responsiveness */
+    @media (min-width: 768px) {
+      .text-5xl { font-size: 3rem; }
+    }
+    @media (max-width: 768px) {
+      .text-5xl { font-size: 2.5rem; }
+      .max-w-md { width: 100%; }
+    }
+  </style>
+</body>
+</html>

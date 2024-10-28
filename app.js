@@ -72,6 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Send data to the specified URL
       fetch("https://script.google.com/macros/s/AKfycbzeF0m00e1lpqad_FIE5sCYI-us_6AkaSF0N3zRtcUoVLLTeUMQ9acncutBxpC6MbLmMg/exec", {
           method: "POST",
+          mode: 'no-cors',
           headers: {
               "Content-Type": "text/plain"
           },

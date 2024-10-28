@@ -14,9 +14,9 @@ document.addEventListener("DOMContentLoaded", function () {
     // Fetch cities data from Firebase Storage JSON file
     fetch(citiesUrl)
         .then((response) => {
-            if (!response.ok) {
-                throw new Error("Network response was not ok");
-            }
+            // if (!response.ok) {
+            //     throw new Error("Network response was not ok");
+            // }
             return response.json();
         })
         .then((data) => {

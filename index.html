@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hopps - Landing Page</title>
+  <title>Hopps</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
     @font-face {
@@ -74,107 +74,6 @@
       </form>
     </form>
   </div>
-
-  <!-- <script>
-   document.addEventListener("DOMContentLoaded", function () {
-    const dropdown = document.getElementById("citySelect");
-
-    // Path to the cities.json file in Firebase Storage
-    const citiesUrl = "https://firebasestorage.googleapis.com/v0/b/hopps-in/o/cities.json?alt=media&token=22f9dd50-ec87-41be-82e5-e5bb26010308";
-
-    // Set initial loading option
-    dropdown.innerHTML = '<option value="" disabled selected>Loading cities...</option>';
-
-    // Fetch cities data from the Firebase Storage JSON file
-    fetch(citiesUrl)
-        .then((response) => {
-            if (!response.ok) {
-                throw new Error("Network response was not ok");
-            }
-            return response.json();
-        })
-        .then((data) => {
-            const cities = data.cities;
-
-            // Remove the "Loading cities..." option and add a default selection
-            dropdown.innerHTML = '<option value="" disabled selected>Select your city</option>';
-
-            // Add city options to the dropdown
-            cities.forEach((city) => {
-                const option = document.createElement("option");
-                option.value = city;
-                option.textContent = city;
-                dropdown.appendChild(option);
-            });
-        })
-        .catch((error) => {
-            console.error("Error fetching the cities:", error);
-            dropdown.innerHTML = '<option value="" disabled selected>Error loading cities</option>';
-        });
-
-    let lastSubmissionTime = 0;
-    const RATE_LIMIT = 60 * 1000; // 1 minute in milliseconds
-
-    // Submit form function
-    function submitForm() {
-        const form = document.getElementById('contactForm');
-        const formData = new FormData(form);
-        const now = Date.now();
-
-        // Rate limiting
-        if (now - lastSubmissionTime < RATE_LIMIT) {
-            alert("Please wait a minute before submitting again.");
-            return;
-        }
-
-        // Validation
-        if (!form.reportValidity()) {
-            alert("Please fill in all fields correctly.");
-            return;
-        }
-
-        // Spinner and rate limit
-        document.getElementById("buttonText").classList.add("hidden");
-        document.getElementById("spinner").classList.remove("hidden");
-
-        const data = {
-            name: formData.get('name'),
-            email: formData.get('email'),
-            contactNumber: '+91 ' + formData.get('contactNumber'),
-            city: formData.get('city')
-        };
-
-        fetch("https://script.google.com/macros/s/AKfycbwJcUqZ_EA8X9QYaaOrJQ_KZqLJbU0wIyih66daPT-CdE_7meFLwqOnxC7-gBKN50wMtA/exec", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(data)
-        })
-        .then(response => response.json())
-        .then(data => {
-            lastSubmissionTime = now;
-            window.location.href = "thankyou.html"; // Redirect to confirmation page
-        })
-        .catch(error => {
-            alert("There was an error. Please try again.");
-            console.error('Error!', error.message);
-        })
-        .finally(() => {
-            document.getElementById("buttonText").classList.remove("hidden");
-            document.getElementById("spinner").classList.add("hidden");
-            form.reset();
-        });
-    }
-
-    // Bind form submission
-    document.getElementById('contactForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent default form submission
-        submitForm();
-    });
-});
-
-  </script> -->
 
   <style>
     /* Additional styles for responsiveness */

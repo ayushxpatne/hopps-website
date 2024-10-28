@@ -79,9 +79,9 @@ document.addEventListener("DOMContentLoaded", function () {
               body: JSON.stringify(data)
           })
           .then(response => {
-              // if (!response.ok) {
-              //     throw new Error("Network response was not ok");
-              // }
+              if (!response.ok) {
+                  console.error("Network response was not ok");
+              }
               return response.text(); // Parse response as plain text
           })
           .then(text => {

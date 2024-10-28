@@ -30,7 +30,7 @@
 </head>
 <body class="bg-black text-white font-['Inter'] flex items-center justify-center min-h-screen">
   <div class="text-center max-w-md">
-    <h1 class="text-3xl font-['OverusedGrotesk'] font-black">Welcome to Hopps!</h1>
+    <h1 class="text-3xl font-['OverusedGrotesk'] font-black logo-spacing">Welcome to Hopps!</h1>
     <p class="mt-4 text-lg font-light character-spacing">
       Thank you for joining the waitlist! We’re thrilled to have you. Spread the word and invite your friends to join as well.
     </p>
@@ -43,7 +43,7 @@
     function share() {
       if (navigator.share) {
         navigator.share({
-          title: 'Join the Hopps Waitlist!',
+          title: 'Inviting you to join the Hopps Waitlist!',
           text: 'Hopps is launching soon! Join the waitlist to be the first to experience a new way of dining out.',
           url: window.location.href
         }).catch((error) => console.log('Error sharing', error));

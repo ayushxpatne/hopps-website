@@ -88,10 +88,10 @@ document.addEventListener("DOMContentLoaded", function () {
               lastSubmissionTime = now; // Update last submission time
               window.location.href = "thankyou.html"; // Redirect to confirmation page
           })
-          .catch(error => {
-              alert("There was an error. Please try again.");
-              console.error('Error!', error.message);
-          })
+          // .catch(error => {
+          //     alert("There was an error. Please try again.");
+          //     console.error('Error!', error.message);
+          // })
           .finally(() => {
               // Hide loading spinner and show button text again
               document.getElementById("buttonText").classList.remove("hidden");

@@ -1,0 +1,8 @@
+[
+    {
+        "origin": ["https://*.hopps.in", "https://hopps.in"],
+        "method": ["GET", "POST"],
+        "responseHeader": ["Content-Type"],
+        "maxAgeSeconds": 3600
+    }
+]

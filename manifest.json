@@ -1,0 +1,21 @@
+{
+    "name": "Hopps - Your Personalized Social Dining Experience",
+    "short_name": "Hopps",
+    "description": "Discover Dining, One Hopp at a Time. Your personalized social dining experience. Find the perfect spot based on your mood, taste, and company.",
+    "icons": [
+        {
+            "src": "/favicon/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/favicon/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "/",
+    "background_color": "#FFFFFF",
+    "theme_color": "#FFFFFF",
+    "display": "standalone"
+}

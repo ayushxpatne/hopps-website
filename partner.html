@@ -1,308 +1,360 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Partner with Hopps - Boost Your Business</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            'overused': ['OverusedGrotesk', 'sans-serif'],
-            'inter': ['Inter', 'sans-serif'],
-          },
-          colors: {
-            'hopps-primary': '#6366f1',
-            'hopps-secondary': '#f9f7f7',
-            'hopps-accent': '#fcd34d',
-          }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partner with Hopps - Boost Your Business</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" href="/favicon.ico" sizes="32x32" type="image/x-icon">
+    <link rel="icon" href="/favicon.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'overused': ['OverusedGrotesk', 'sans-serif'],
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'hopps-primary': '#6366f1',
+                        'hopps-secondary': '#f9f7f7',
+                        'hopps-accent': '#fcd34d',
+                    }
+                }
+            }
         }
-      }
-    }
-  </script>
+    </script>
 </head>
+
 <body class="bg-white text-gray-800 font-inter">
-  <!-- Navigation -->
-  <nav class="bg-white py-4 shadow-sm sticky top-0 z-50">
-    <div class="container mx-auto px-4 md:px-8">
-      <div class="flex justify-between items-center">
-        <a href="index.html" class="font-overused font-black text-2xl md:text-3xl logo-spacing text-hopps-primary">hopps</a>
-        
-        <!-- Mobile menu button -->
-        <div class="md:hidden">
-          <button id="mobile-menu-button" class="text-gray-600 hover:text-hopps-primary">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
-        </div>
-        
-        <!-- Desktop menu -->
-        <div class="hidden md:flex items-center space-x-8">
-          <a href="index.html" class="font-medium hover:text-hopps-primary">Home</a>
-          <a href="about.html" class="font-medium hover:text-hopps-primary">About Us</a>
-          <a href="blogs.html" class="font-medium hover:text-hopps-primary">Blogs</a>
-          <a href="partner.html" class="font-medium text-white bg-hopps-primary px-4 py-2 rounded-lg hover:bg-opacity-90 transition-all">Become a Partner</a>
-        </div>
-      </div>
-      
-      <!-- Mobile menu -->
-      <div id="mobile-menu" class="md:hidden hidden pt-4 pb-2">
-        <a href="index.html" class="block py-2 hover:text-hopps-primary">Home</a>
-        <a href="about.html" class="block py-2 hover:text-hopps-primary">About Us</a>
-        <a href="blogs.html" class="block py-2 hover:text-hopps-primary">Blogs</a>
-        <a href="partner.html" class="block py-2 font-medium text-hopps-primary">Become a Partner</a>
-      </div>
-    </div>
-  </nav>
+    <!-- Navigation -->
+    <nav class="bg-white py-4 shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="flex justify-between items-center">
+                <a href="index.html"
+                    class="font-overused font-black text-2xl md:text-3xl logo-spacing text-hopps-primary">hopps</a>
 
-  <!-- Hero Section -->
-  <section class="bg-gradient-to-b from-white to-indigo-50 py-16 md:py-24">
-    <div class="container mx-auto px-4 md:px-8">
-      <div class="text-center">
-        <h1 class="font-overused font-black text-4xl md:text-5xl lg:text-6xl character-spacing leading-tight mb-6">
-          Partner with <span class="text-hopps-primary">Hopps</span>
-        </h1>
-        <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
-          Join the Hopps community and take your business to the next level. Whether you're a restaurant, café, bar, or event organizer, we’re here to help you grow.
-        </p>
-        <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-          <a href="#restaurant-owners" class="btn-primary inline-block text-center">For Restaurant Owners</a>
-          <a href="#event-organizers" class="btn-secondary inline-block text-center">For Event Organizers</a>
-        </div>
-      </div>
-    </div>
-  </section>
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-hopps-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
 
-  <!-- For Restaurant Owners -->
-  <section id="restaurant-owners" class="py-16 bg-white">
-    <div class="container mx-auto px-4 md:px-8">
-      <div class="text-center mb-12">
-        <h2 class="font-overused font-bold text-3xl md:text-4xl character-spacing mb-4">For Restaurant, Café, and Bar Owners</h2>
-        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-          Hopps is your gateway to increased visibility, more customers, and higher revenue. Let us help you connect with the right audience and grow your business.
-        </p>
-      </div>
-      
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <!-- Feature 1 -->
-        <div class="flex">
-          <div class="mr-4 text-hopps-primary">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-            </svg>
-          </div>
-          <div>
-            <h3 class="font-overused font-bold text-xl mb-2">Maximized Visibility</h3>
-            <p class="text-gray-600">Get discovered by thousands of food lovers in your area. Hopps ensures your venue stands out with personalized recommendations and targeted promotions.</p>
-          </div>
-        </div>
-        
-        <!-- Feature 2 -->
-        <div class="flex">
-          <div class="mr-4 text-hopps-primary">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" />
-            </svg>
-          </div>
-          <div>
-            <h3 class="font-overused font-bold text-xl mb-2">Event Promotion Made Simple</h3>
-            <p class="text-gray-600">Promote your events, themed nights, and special offers directly to your target audience. Hopps makes it easy to attract more customers with seamless event promotion.</p>
-          </div>
-        </div>
-        
-        <!-- Feature 3 -->
-        <div class="flex">
-          <div class="mr-4 text-hopps-primary">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-            </svg>
-          </div>
-          <div>
-            <h3 class="font-overused font-bold text-xl mb-2">Data-Driven Insights</h3>
-            <p class="text-gray-600">Access detailed analytics about your customers, including their preferences and behavior. Use these insights to tailor your offerings and boost engagement.</p>
-          </div>
-        </div>
-        
-        <!-- Feature 4 -->
-        <div class="flex">
-          <div class="mr-4 text-hopps-primary">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-          </div>
-          <div>
-            <h3 class="font-overused font-bold text-xl mb-2">More Customers, More Revenue</h3>
-            <p class="text-gray-600">Drive walk-ins, table bookings, and customer loyalty with Hopps. Our platform is designed to help you grow your business and increase revenue.</p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="mt-12 text-center">
-        <a href="mailto:business@hopps.in" class="btn-primary inline-block">Contact Us to Get Started</a>
-      </div>
-    </div>
-  </section>
+                <!-- Desktop menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="font-medium hover:text-hopps-primary">Home</a>
+                    <a href="about.html" class="font-medium hover:text-hopps-primary">About Us</a>
+                    <a href="blogs.html" class="font-medium hover:text-hopps-primary">Blogs</a>
+                    <a href="partner.html"
+                        class="font-medium text-white bg-hopps-primary px-4 py-2 rounded-lg hover:bg-opacity-90 transition-all">Become
+                        a Partner</a>
+                </div>
+            </div>
 
-  <!-- For Event Organizers -->
-  <section id="event-organizers" class="py-16 bg-gradient-to-b from-indigo-50 to-white">
-    <div class="container mx-auto px-4 md:px-8">
-      <div class="text-center mb-12">
-        <h2 class="font-overused font-bold text-3xl md:text-4xl character-spacing mb-4">For Event Organizers</h2>
-        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-          Whether you host food walks, workshops, or pop-up events, Hopps is the perfect platform to promote your events and connect with a passionate audience.
-        </p>
-      </div>
-      
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <!-- Feature 1 -->
-        <div class="flex">
-          <div class="mr-4 text-hopps-primary">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-          </div>
-          <div>
-            <h3 class="font-overused font-bold text-xl mb-2">Reach the Right Audience</h3>
-            <p class="text-gray-600">Promote your events to a community of food and drink enthusiasts who are always looking for unique experiences.</p>
-          </div>
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="md:hidden hidden pt-4 pb-2">
+                <a href="index.html" class="block py-2 hover:text-hopps-primary">Home</a>
+                <a href="about.html" class="block py-2 hover:text-hopps-primary">About Us</a>
+                <a href="blogs.html" class="block py-2 hover:text-hopps-primary">Blogs</a>
+                <a href="partner.html" class="block py-2 font-medium text-hopps-primary">Become a Partner</a>
+            </div>
         </div>
-        
-        <!-- Feature 2 -->
-        <div class="flex">
-          <div class="mr-4 text-hopps-primary">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-            </svg>
-          </div>
-          <div>
-            <h3 class="font-overused font-bold text-xl mb-2">Easy Event Management</h3>
-            <p class="text-gray-600">Create, manage, and promote your events with ease. Hopps provides all the tools you need to ensure your event is a success.</p>
-          </div>
-        </div>
-        
-        <!-- Feature 3 -->
-        <div class="flex">
-          <div class="mr-4 text-hopps-primary">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-            </svg>
-          </div>
-          <div>
-            <h3 class="font-overused font-bold text-xl mb-2">Build Your Community</h3>
-            <p class="text-gray-600">Connect with like-minded individuals and grow your community of event-goers. Hopps helps you build lasting relationships with your audience.</p>
-          </div>
-        </div>
-        
-        <!-- Feature 4 -->
-        <div class="flex">
-          <div class="mr-4 text-hopps-primary">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-          </div>
-          <div>
-            <h3 class="font-overused font-bold text-xl mb-2">Monetize Your Events</h3>
-            <p class="text-gray-600">Turn your passion into profit. Hopps helps you monetize your events by connecting you with attendees who are eager to participate.</p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="mt-12 text-center">
-        <a href="mailto:business@hopps.in" class="btn-primary inline-block">Contact Us to Get Started</a>
-      </div>
-    </div>
-  </section>
+    </nav>
 
-  <!-- CTA Section -->
-  <section class="py-16 bg-hopps-primary text-white">
-    <div class="container mx-auto px-4 md:px-8 text-center">
-      <h2 class="font-overused font-bold text-3xl md:text-4xl character-spacing mb-6">Ready to Grow Your Business?</h2>
-      <p class="text-xl mb-8 max-w-2xl mx-auto">Join Hopps today and start reaching more customers, promoting your events, and growing your business.</p>
-      <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-        <a href="mailto:business@hopps.in" class="bg-white text-hopps-primary font-bold py-3 px-8 rounded-lg hover:bg-opacity-90 transition-all">Contact Us</a>
-      </div>
-    </div>
-  </section>
- <!-- Footer -->
- <footer class="bg-gray-100 py-12">
-    <div class="container mx-auto px-4 md:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
-                <h3 class="font-overused font-black text-2xl logo-spacing text-hopps-primary mb-4">hopps</h3>
-                <p class="text-gray-600 mb-4">Your Personalized Social Dining Experience</p>
-                <div class="flex space-x-4">
-            <!-- <a href="#" class="text-gray-500 hover:text-hopps-primary">
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-b from-white to-indigo-50 py-16 md:py-24">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="text-center">
+                <h1
+                    class="font-overused font-black text-4xl md:text-5xl lg:text-6xl character-spacing leading-tight mb-6">
+                    Partner with <span class="text-hopps-primary">Hopps</span>
+                </h1>
+                <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
+                    Join the Hopps community and take your business to the next level. Whether you're a restaurant,
+                    café, bar, or event organizer, we’re here to help you grow.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#restaurant-owners" class="btn-primary inline-block text-center">For Restaurant Owners</a>
+                    <a href="#event-organizers" class="btn-secondary inline-block text-center">For Event Organizers</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- For Restaurant Owners -->
+    <section id="restaurant-owners" class="py-16 bg-white">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-overused font-bold text-3xl md:text-4xl character-spacing mb-4">For Restaurant, Café,
+                    and Bar Owners</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Hopps is your gateway to increased visibility, more customers, and higher revenue. Let us help you
+                    connect with the right audience and grow your business.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Feature 1 -->
+                <div class="flex">
+                    <div class="mr-4 text-hopps-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-overused font-bold text-xl mb-2">Maximized Visibility</h3>
+                        <p class="text-gray-600">Get discovered by thousands of food lovers in your area. Hopps ensures
+                            your venue stands out with personalized recommendations and targeted promotions.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="flex">
+                    <div class="mr-4 text-hopps-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-overused font-bold text-xl mb-2">Event Promotion Made Simple</h3>
+                        <p class="text-gray-600">Promote your events, themed nights, and special offers directly to your
+                            target audience. Hopps makes it easy to attract more customers with seamless event
+                            promotion.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="flex">
+                    <div class="mr-4 text-hopps-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-overused font-bold text-xl mb-2">Data-Driven Insights</h3>
+                        <p class="text-gray-600">Access detailed analytics about your customers, including their
+                            preferences and behavior. Use these insights to tailor your offerings and boost engagement.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="flex">
+                    <div class="mr-4 text-hopps-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-overused font-bold text-xl mb-2">More Customers, More Revenue</h3>
+                        <p class="text-gray-600">Drive walk-ins, table bookings, and customer loyalty with Hopps. Our
+                            platform is designed to help you grow your business and increase revenue.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <a href="mailto:business@hopps.in" class="btn-primary inline-block">Contact Us to Get Started</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- For Event Organizers -->
+    <section id="event-organizers" class="py-16 bg-gradient-to-b from-indigo-50 to-white">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-overused font-bold text-3xl md:text-4xl character-spacing mb-4">For Event Organizers
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Whether you host food walks, workshops, or pop-up events, Hopps is the perfect platform to promote
+                    your events and connect with a passionate audience.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Feature 1 -->
+                <div class="flex">
+                    <div class="mr-4 text-hopps-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-overused font-bold text-xl mb-2">Reach the Right Audience</h3>
+                        <p class="text-gray-600">Promote your events to a community of food and drink enthusiasts who
+                            are always looking for unique experiences.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="flex">
+                    <div class="mr-4 text-hopps-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-overused font-bold text-xl mb-2">Easy Event Management</h3>
+                        <p class="text-gray-600">Create, manage, and promote your events with ease. Hopps provides all
+                            the tools you need to ensure your event is a success.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="flex">
+                    <div class="mr-4 text-hopps-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-overused font-bold text-xl mb-2">Build Your Community</h3>
+                        <p class="text-gray-600">Connect with like-minded individuals and grow your community of
+                            event-goers. Hopps helps you build lasting relationships with your audience.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="flex">
+                    <div class="mr-4 text-hopps-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-overused font-bold text-xl mb-2">Monetize Your Events</h3>
+                        <p class="text-gray-600">Turn your passion into profit. Hopps helps you monetize your events by
+                            connecting you with attendees who are eager to participate.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <a href="mailto:business@hopps.in" class="btn-primary inline-block">Contact Us to Get Started</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-hopps-primary text-white">
+        <div class="container mx-auto px-4 md:px-8 text-center">
+            <h2 class="font-overused font-bold text-3xl md:text-4xl character-spacing mb-6">Ready to Grow Your Business?
+            </h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Join Hopps today and start reaching more customers, promoting your
+                events, and growing your business.</p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="mailto:business@hopps.in"
+                    class="bg-white text-hopps-primary font-bold py-3 px-8 rounded-lg hover:bg-opacity-90 transition-all">Contact
+                    Us</a>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-gray-100 py-12">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-overused font-black text-2xl logo-spacing text-hopps-primary mb-4">hopps</h3>
+                    <p class="text-gray-600 mb-4">Your Personalized Social Dining Experience</p>
+                    <div class="flex space-x-4">
+                        <!-- <a href="#" class="text-gray-500 hover:text-hopps-primary">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
               </svg>
             </a> -->
-            <a href="http://www.instagram.com/hopps_india" class="text-gray-500 hover:text-hopps-primary">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-              </svg>
-            </a>
-            <!-- <a href="#" class="text-gray-500 hover:text-hopps-primary">
+                        <a href="http://www.instagram.com/hopps_india" class="text-gray-500 hover:text-hopps-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                        </a>
+                        <!-- <a href="#" class="text-gray-500 hover:text-hopps-primary">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
               </svg>
             </a> -->
-          </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Navigation</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-600 hover:text-hopps-primary">Home</a></li>
+                        <li><a href="about.html" class="text-gray-600 hover:text-hopps-primary">About Us</a></li>
+                        <li><a href="blogs.html" class="text-gray-600 hover:text-hopps-primary">Blogs</a></li>
+                        <li><a href="partner.html" class="text-gray-600 hover:text-hopps-primary">Become a Partner</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="privacy_policy.html" class="text-gray-600 hover:text-hopps-primary">Privacy
+                                Policy</a></li>
+                        <li><a href="tos.html" class="text-gray-600 hover:text-hopps-primary">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-hopps-primary">Cookies Policy</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Contact</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-hopps-primary mr-2 mt-0.5"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            <span class="text-gray-600">support@hopps.in</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
 
-            <div>
-                <h4 class="font-bold text-lg mb-4">Navigation</h4>
-                <ul class="space-y-2">
-                    <li><a href="index.html" class="text-gray-600 hover:text-hopps-primary">Home</a></li>
-                    <li><a href="about.html" class="text-gray-600 hover:text-hopps-primary">About Us</a></li>
-                    <li><a href="blogs.html" class="text-gray-600 hover:text-hopps-primary">Blogs</a></li>
-                    <li><a href="partner.html" class="text-gray-600 hover:text-hopps-primary">Become a Partner</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div>
-                <h4 class="font-bold text-lg mb-4">Legal</h4>
-                <ul class="space-y-2">
-                   <li><a href="privacy_policy.html" class="text-gray-600 hover:text-hopps-primary">Privacy Policy</a></li>
-                    <li><a href="tos.html" class="text-gray-600 hover:text-hopps-primary">Terms of Service</a></li>
-                    <li><a href="#" class="text-gray-600 hover:text-hopps-primary">Cookies Policy</a></li>
-                </ul>
-            </div>
-
-            <div>
-                <h4 class="font-bold text-lg mb-4">Contact</h4>
-                <ul class="space-y-2">
-                    <li class="flex items-start">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-hopps-primary mr-2 mt-0.5"
-                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                        </svg>
-                        <span class="text-gray-600">support@hopps.in</span>
-                    </li>
-                </ul>
+            <div class="border-t border-gray-200 mt-8 pt-8 text-center">
+                <p class="text-gray-600">© 2025 Hopps. All rights reserved.</p>
             </div>
         </div>
+    </footer>
 
-        <div class="border-t border-gray-200 mt-8 pt-8 text-center">
-            <p class="text-gray-600">© 2025 Hopps. All rights reserved.</p>
-        </div>
-    </div>
-</footer>
-
-<!-- Mobile Menu JavaScript -->
-<script>
-    document.getElementById('mobile-menu-button').addEventListener('click', function () {
-        const mobileMenu = document.getElementById('mobile-menu');
-        mobileMenu.classList.toggle('hidden');
-    });
-</script>
+    <!-- Mobile Menu JavaScript -->
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 
 </html>
